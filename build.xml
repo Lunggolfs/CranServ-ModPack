@@ -3,15 +3,12 @@
     <description>
         Zip script to work with Jenkins
     </description>
-  <!-- set global properties for this build -->
-  <property name="dist"  location="dist"/>
-
-  <target name="zip">
-    <!-- Create the time stamp -->
-    <tstamp/>
-    <!-- Zip all files into a single zip -->
-    <zip destfile="${dist}/CranServ-ModPack-Beta-${DSTAMP}.zip"
-        basedir="/"
-    />
-  </target>
+    <target name="zip">
+        <!-- Zip all files into a single zip -->
+        <zip destfile="${dist}/CranServ-ModPack-Beta.zip"
+            basedir="/"
+            excludes=".gitignore", ".gitattributes", "build.xml", ".git/**"
+            compress="true"
+        />
+    </target>
 </project>
