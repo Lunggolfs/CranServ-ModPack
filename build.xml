@@ -1,5 +1,4 @@
-
-<project name="CranServ-ModPack-Beta" default="zip" basedir="/var/lib/jenkins/jobs/CranServ ModPack/workspace">
+<project name="CranServ-ModPack" default="zip" basedir="/var/lib/jenkins/jobs/CranServ ModPack/workspace">
     <description>
         Zip script to work with Jenkins
     </description>
