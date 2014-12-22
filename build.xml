@@ -1,0 +1,3 @@
+<zip destfile="${dist}/CranServ-ModPack.zip"
+basedir="/"
+/>
