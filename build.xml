@@ -10,7 +10,7 @@
     <!-- Zip all files into a single zip -->
     <zip destfile="${dist}/CranServ-ModPack-Beta.zip"
         basedir="/"
-        excludes=".gitignore, .gitattributes, build.xml, **/.git/"
+        excludes=".gitignore, .gitattributes, build.xml, .git/**"
         compress="true"
     />
   </target>
