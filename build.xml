@@ -1,3 +1,17 @@
-<zip destfile="${dist}/CranServ-ModPack.zip"
-basedir="/"
-/>
+
+<project name="CranServ-ModPack-Beta" default="zip" basedir="/">
+    <description>
+        Zip script to work with Jenkins
+    </description>
+  <!-- set global properties for this build -->
+  <property name="dist"  location="dist"/>
+
+  <target name="zip">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Zip all files into a single zip -->
+    <zip destfile="${dist}/CranServ-ModPack-Beta-${DSTAMP}.zip"
+        basedir="/"
+    />
+  </target>
+</project>
