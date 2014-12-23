@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <project name="CranServ-ModPack" default="zip" basedir="/var/lib/jenkins/jobs/CranServ ModPack/workspace">
-=======
-
-<project name="CranServ-ModPack-Beta" default="zip" basedir="/var/lib/jenkins/jobs/CranServ ModPack Beta/workspace">
->>>>>>> origin/beta
     <description>
         Zip script to work with Jenkins
     </description>
@@ -12,11 +7,7 @@
 
   <target name="zip">
     <!-- Zip all files into a single zip -->
-<<<<<<< HEAD
     <zip destfile="${dist}/CranServ-ModPack.zip"
-=======
-    <zip destfile="${dist}/CranServ-ModPack-Beta.zip"
->>>>>>> origin/beta
         basedir="/var/lib/jenkins/jobs/CranServ ModPack Beta/workspace"
         excludes=".gitignore, .gitattributes, build.xml, .git/**"
         compress="true"
