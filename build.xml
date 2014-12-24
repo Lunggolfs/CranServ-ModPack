@@ -1,28 +1,12 @@
-<project name="CranServ-ModPack" default="zip" basedir="/var/lib/jenkins/jobs/CranServ ModPack/workspace/">
+<project name="CranServ-ModPack" default="zip" basedir="/var/lib/jenkins/jobs/CranServ ModPack/workspace">
     <description>
         Zip script to work with Jenkins
     </description>
-<<<<<<< HEAD
     <target name="zip">
-        <delete dir="${basedir}"/>
         <!-- Zip all files into a single zip -->
-        <zip destfile="CranServ-ModPack.zip"
-            basedir="${basedir}"
+        <zip destfile="$basedir"
             excludes=".gitignore, .gitattributes, build.xml, .git/**"
             compress="true"
         />
     </target>
-=======
-  <!-- set global properties for this build -->
-  <property name="dist"  location="dist"/>
-
-  <target name="zip">
-    <!-- Zip all files into a single zip -->
-    <zip destfile="${dist}/CranServ-ModPack.zip"
-        basedir="/var/lib/jenkins/jobs/CranServ ModPack Beta/workspace"
-        excludes=".gitignore, .gitattributes, build.xml, .git/**"
-        compress="true"
-    />
-  </target>
->>>>>>> parent of 7de6481... Let's see if this works
 </project>
