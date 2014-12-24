@@ -4,7 +4,9 @@
     </description>
     <target name="clean">
         <!-- Delete previous files -->
-        <delete dir="${basedir}"/>
+         <delete includeemptydirs="true">
+            <fileset dir="${basedir}" includes="**/*"/>
+        </delete>
     </target>
     <target name="zip">
         <!-- Zip all files into a single zip -->
