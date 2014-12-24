@@ -8,7 +8,7 @@
         <!-- Zip all files into a single zip -->
         <zip destfile="CranServ-ModPack.zip"
             basedir="${basedir}"
-            excludes=".gitignore, .gitattributes, build.xml, .git/**"
+            excludes=".gitignore, .gitattributes, build.xml, .git/**, CranServ-ModPack.zip"
             compress="true"
         />
     </target>
