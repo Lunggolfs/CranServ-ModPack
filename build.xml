@@ -4,7 +4,7 @@
     </description>
     <target name="zip">
         <!-- Zip all files into a single zip -->
-        <zip destfile="$basedir"
+        <zip destfile="{$basedir}"
             excludes=".gitignore, .gitattributes, build.xml, .git/**"
             compress="true"
         />
