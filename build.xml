@@ -2,15 +2,20 @@
     <description>
         Zip script to work with Jenkins
     </description>
+    <property name="build" location="${basedir}/build"/>
     <target name="clean">
         <!-- Delete previous files -->
-         <delete includeemptydirs="true">
-            <fileset dir="${basedir}" includes="**/*"/>
-        </delete>
+        <delete dir="${build}"/>
+    </target>
+    <target name="init" depends="clean">
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build}"/>
     </target>
     <target name="zip">
         <!-- Zip all files into a single zip -->
-        <zip destfile="CranServ-ModPack.zip"
+        <zip destfile="${build}/CranServ-ModPack.zip"
             basedir="${basedir}"
             excludes=".gitignore, .gitattributes, build.xml, .git/**, CranServ-ModPack.zip"
             compress="true"
