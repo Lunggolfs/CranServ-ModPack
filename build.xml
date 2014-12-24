@@ -4,7 +4,8 @@
     </description>
     <target name="zip">
         <!-- Zip all files into a single zip -->
-        <zip destfile="{$basedir}"
+        <zip destfile="CranServ-ModPack.zip"
+            basedir="${basedir}"
             excludes=".gitignore, .gitattributes, build.xml, .git/**"
             compress="true"
         />
