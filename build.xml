@@ -3,6 +3,8 @@
         Zip script to work with Jenkins
     </description>
     <target name="zip">
+        <!-- Delete previous file -->
+        <delete file="CranServ-ModPack.zip"/>
         <!-- Zip all files into a single zip -->
         <zip destfile="CranServ-ModPack.zip"
             basedir="${basedir}"
