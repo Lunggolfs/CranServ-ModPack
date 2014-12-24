@@ -2,12 +2,9 @@
     <description>
         Zip script to work with Jenkins
     </description>
-  <!-- set global properties for this build -->
-  <property name="dist"  location="dist"/>
-
   <target name="zip">
     <!-- Zip all files into a single zip -->
-    <zip destfile="${dist}/CranServ-ModPack.zip"
+    <zip destfile="CranServ-ModPack.zip"
         basedir="/var/lib/jenkins/jobs/CranServ ModPack Beta/workspace"
         excludes=".gitignore, .gitattributes, build.xml, .git/**"
         compress="true"
