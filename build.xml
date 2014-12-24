@@ -1,17 +1,24 @@
-
 <project name="CranServ-ModPack-Beta" default="zip" basedir="/var/lib/jenkins/jobs/CranServ ModPack Beta/workspace">
     <description>
         Zip script to work with Jenkins
     </description>
-  <!-- set global properties for this build -->
-  <property name="dist"  location="dist"/>
-
-  <target name="zip">
-    <!-- Zip all files into a single zip -->
-    <zip destfile="${dist}/CranServ-ModPack-Beta.zip"
-        basedir="/var/lib/jenkins/jobs/CranServ ModPack Beta/workspace"
-        excludes=".gitignore, .gitattributes, build.xml, .git/**"
-        compress="true"
-    />
-  </target>
+    <property name="build" location="${basedir}/build"/>
+    <target name="clean">
+        <!-- Delete previous files -->
+        <delete dir="${build}"/>
+    </target>
+    <target name="init" depends="clean">
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build}"/>
+    </target>
+    <target name="zip">
+        <!-- Zip all files into a single zip -->
+        <zip destfile="${build}/CranServ-ModPack-Beta.zip"
+            basedir="${basedir}"
+            excludes=".gitignore, .gitattributes, build.xml, .git/**, CranServ-ModPack-Beta.zip"
+            compress="true"
+        />
+    </target>
 </project>
